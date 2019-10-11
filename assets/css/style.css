@@ -1,6 +1,5 @@
 .train-schedule {
     font-family: DS-DIGITAL;
-    /* font-family: Solari; */
     font-size: 20px;
 }
 
@@ -17,6 +16,7 @@ body {
 
 .jumbotron {
     background: cornflowerblue;
+    font-family: Solari;
 }
 
 .card-header {
