@@ -14,12 +14,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Anton|Oxygen&display=swap" rel="stylesheet">
     <script src="assets/javascript/app.js"></script>
     <link rel="stylesheet" href="assets/fonts/Solari.ttf">
     <link rel="stylesheet" href="assets/fonts/DS-DIGI.TTF">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/images/trainfav.png" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
 </head>
 
 <body>
@@ -43,6 +45,7 @@
                             <th>Frequency (min)</th>
                             <th>Next Arrival</th>
                             <th>Minutes Away</th>
+                            
                         </tr>
                     </thead>
                     <tbody class="train-schedule">
@@ -62,19 +65,19 @@
                 <form role="form">
                     <div class="form-group row">
                         <label for="name-input">Train Name:</label>
-                        <input class="form-control" id="name-input" type="text">
+                        <input class="form-control form-field" id="name-input" type="text">
                     </div>
                     <div class="form-group row">
                         <label for="destination-input">Destination:</label>
-                        <input class="form-control" id="destination-input" type="text">
+                        <input class="form-control form-field" id="destination-input" type="text">
                     </div>
                     <div class="form-group row">
                         <label for="frequency-input">Frequency: (Minutes)</label>
-                        <input class="form-control" id="frequency-input" type="number">
+                        <input class="form-control form-field" id="frequency-input" type="number">
                     </div>
                     <div class="form-group row">
                         <label for="first-input">First Arrival Time:</label>
-                        <input class="form-control" id="first-input" type="time"></input>
+                        <input class="form-control form-field" id="first-input" type="time"></input>
                     </div>
 
                     <button class="btn btn-primary" id="add-train" type="submit">Submit</button>

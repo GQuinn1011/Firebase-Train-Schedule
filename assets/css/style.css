@@ -6,6 +6,7 @@
 #current-time {
     text-align: center;
     font-family: DS-DIGITAL;
+    color: white;
     font-size: 28px;
 }
 
@@ -15,18 +16,32 @@ body {
 }
 
 .jumbotron {
-    background: cornflowerblue;
-    font-family: Solari;
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: Oxygen, sans-serif;
+    color: black;
 }
 
 .card-header {
     text-align: center;
-    background: cornflowerblue;
+    background: black;
+    color: white;
 }
 
 #scheduler,
 #train-board {
-    background-color: papayawhip;
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    color: white;
+}
+td {
+    color: white;
+    text-align: center;
+}
+th {
+    text-align: center;
 }
 
 .form-control {

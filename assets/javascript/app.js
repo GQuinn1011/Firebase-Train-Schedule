@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function(){
 
     var config = {
         apiKey: "AIzaSyCO_eZZUACTsm3W5SJIfJIL-IwnhfxiTTA",
@@ -18,7 +18,7 @@ $(document).ready(function() {
     }, 1000);
 
 
-    $(document).on("click", "button", function(event) {
+    $(document).on("click", "#add-train", function(event) {
         event.preventDefault();
 
         var tName = $("#name-input").val().trim();
@@ -54,6 +54,8 @@ $(document).ready(function() {
         var trainDestination = childSnapshot.val().destination;
         var trainFrequency = childSnapshot.val().frequency;
         var firstTrainTime = childSnapshot.val().firstTime;
+        var key = childSnapshot.key;
+        console.log(key);
         console.log(trainName);
         console.log(trainDestination);
         console.log(trainFrequency);
@@ -91,7 +93,16 @@ $(document).ready(function() {
             $("<td>").text(trainDestination),
             $("<td>").text(trainFrequency),
             $("<td>").text(firstTrainTime),
-            $("<td>").text(tMinutesTillTrain));
+            $("<td>").text(tMinutesTillTrain),
+            $("<td><button class='arrival fas fa-trash-alt' data-key=" + key + "></td>"));
         $(".train-schedule").append(newRow);
     });
-});
+    $(document).on("click", ".arrival", function() {
+        keyref = $(this).attr("data-key");
+        database.ref().child(keyref).remove();
+        window.location.reload();
+      });
+      setInterval(function(){
+          window.location.reload();
+      },60000);
+    });
